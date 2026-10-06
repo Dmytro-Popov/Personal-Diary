@@ -1,21 +1,3 @@
-// const EntryList = ({ entries }) => {
-//   return (
-//     <div>
-//       {entries.map((entry, index) => (
-//         <div key={index}>
-//           <h2>{entry.title}</h2>
-//           <p>{entry.date}</p>
-//           <img src={entry.image} alt="" />
-//           <p>{entry.text}</p>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
-
-// export default EntryList;
-
-
 const EntryList = ({ entries }) => {
   return (
     <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
