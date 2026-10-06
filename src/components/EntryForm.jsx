@@ -62,7 +62,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
       </label>
 
       <label className="block text-sm text-zinc-400">
-        Текст
+        Text
         <textarea
           rows={5}
           className={`${inputClass} mt-1.5 resize-y`}
@@ -88,6 +88,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
         >
           Speichern
         </button>
+        
       </div>
     </form>
   )
