@@ -25,24 +25,25 @@ const App = () => {
   return (
     <div>
       <Header onAddClick={() => setIsAddOpen(true)} />
-
-      <EntryList
-        entries={entries}
-        onSelect={(entry) => setSelectedEntry(entry)}
-      />
-
-      {isAddOpen && (
-        <AddEntryModal
-          onClose={() => setIsAddOpen(false)}
-          onSubmit={handleAddEntry}
+      <div className="min-h-screen w-full bg-zinc-900 text-white">
+        <EntryList
+          entries={entries}
+          onSelect={(entry) => setSelectedEntry(entry)}
         />
-      )}
-      {selectedEntry && (
-        <ViewEntryModal
-          entry={selectedEntry}
-          onClose={() => setSelectedEntry(null)}
-        />
-      )}
+
+        {isAddOpen && (
+          <AddEntryModal
+            onClose={() => setIsAddOpen(false)}
+            onSubmit={handleAddEntry}
+          />
+        )}
+        {selectedEntry && (
+          <ViewEntryModal
+            entry={selectedEntry}
+            onClose={() => setSelectedEntry(null)}
+          />
+        )}
+      </div>
     </div>
   )
 }
