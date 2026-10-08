@@ -1,3 +1,5 @@
+import logoImage from '../assets/logo.png';
+
 const AddEntryButton = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -13,7 +15,7 @@ const Header = ({ onAddClick }) => (
          <a href="#">
       <div className="flex items-center">
         <img 
-          src="/src/assets/logo.png" 
+          src={logoImage} 
           alt="Logo" 
           className="w-25 object-contain" 
         />
