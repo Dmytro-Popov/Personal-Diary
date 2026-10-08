@@ -22,6 +22,13 @@ const App = () => {
     setIsAddOpen(false)
   }
 
+  const handleDeleteEntry = (entryToDelete) => {
+  setEntries((prev) =>
+    prev.filter((entry) => entry !== entryToDelete)
+  )
+   setSelectedEntry(null)
+}
+
   return (
     <div>
       <Header onAddClick={() => setIsAddOpen(true)} />
@@ -41,6 +48,7 @@ const App = () => {
           <ViewEntryModal
             entry={selectedEntry}
             onClose={() => setSelectedEntry(null)}
+            onDelete={handleDeleteEntry}
           />
         )}
       </div>

@@ -84,7 +84,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
 
         <button
           type="submit"
-          className="rounded-lg  px-4 py-2 text-sm font-semibold text-zinc-950 btn btn-warning"
+          className="rounded-lg px-4 py-2 text-sm font-semibold text-zinc-950 btn btn-warning"
         >
           Speichern
         </button>

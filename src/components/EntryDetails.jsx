@@ -1,4 +1,4 @@
-const EntryDetails = ({ entry, onClose }) => {
+const EntryDetails = ({ entry, onClose, onDelete }) => {
   return (
     <div className="p-6 ">
       <h2 className="text-2xl text-black font-semibold">{entry.title}</h2>
@@ -11,11 +11,26 @@ const EntryDetails = ({ entry, onClose }) => {
         className="mt-4 w-full rounded-xl"
       />
 
-      <p className="mt-4 text-black">{entry.text}</p>
+      <p className="mt-4 text-black pb-8">{entry.text}</p>
 
-      <button onClick={onClose} className="mt-6 btn btn-dash rounded-lg border px-4 py-2 text-black">
-        Schließen
-      </button>
+      <div className="flex justify-between gap-2">
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            onDelete(entry)
+          }}
+          className="rounded-lg border-zinc-800 px-4 py-2 text-zinc-900 btn btn-outline btn-error"
+        >
+          Löschen
+        </button>
+                <button
+          onClick={onClose}
+          className="rounded-lg px-4 py-2 text-sm font-semibold text-zinc-950 btn btn-warning"
+        >
+          Schließen
+        </button>
+      </div>
     </div>
   )
 }
