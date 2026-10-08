@@ -15,7 +15,6 @@ const EntryDetails = ({ entry, onClose }) => {
 
       <button onClick={onClose} className="mt-6 btn btn-dash rounded-lg border px-4 py-2 text-black">
         Schließen
-      
       </button>
     </div>
   )
