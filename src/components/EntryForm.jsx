@@ -30,9 +30,9 @@ const EntryForm = ({ onSubmit, onCancel }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 p-6">
-      <h2 className="text-lg font-semibold">Neuer Eintrag</h2>
+      <h2 className="text-lg font-semibold text-black">Neuer Eintrag</h2>
 
-      <label className="block text-sm text-zinc-400">
+      <label className="block text-sm text-zinc-900">
         Überschrift
         <input
           className={`${inputClass} mt-1.5`}
@@ -41,7 +41,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
         />
       </label>
 
-      <label className="block text-sm text-zinc-400">
+      <label className="block text-sm text-zinc-900">
         Datum
         <input
           type="date"
@@ -51,7 +51,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
         />
       </label>
 
-      <label className="block text-sm text-zinc-400">
+      <label className="block text-sm text-zinc-900">
         Bild-URL{' '}
         <input
           className={`${inputClass} mt-1.5`}
@@ -61,7 +61,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
         />
       </label>
 
-      <label className="block text-sm text-zinc-400">
+      <label className="block text-sm text-zinc-900">
         Text
         <textarea
           rows={5}
@@ -77,18 +77,17 @@ const EntryForm = ({ onSubmit, onCancel }) => {
         <button
           type="button"
           onClick={onCancel}
-          className="rounded-lg border border-zinc-800 px-4 py-2 text-sm text-zinc-400 hover:text-amber-400"
+          className="rounded-lg border border-zinc-800 px-4 py-2 text-sm text-zinc-900 btn btn-outline btn-error"
         >
-          Stornierung
+          Stornieren
         </button>
 
         <button
           type="submit"
-          className="rounded-lg  px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-amber-400"
+          className="rounded-lg  px-4 py-2 text-sm font-semibold text-zinc-950 btn btn-warning"
         >
           Speichern
         </button>
-        
       </div>
     </form>
   )
