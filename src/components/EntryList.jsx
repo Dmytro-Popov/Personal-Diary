@@ -1,7 +1,7 @@
 const EntryList = ({ entries, onSelect }) => {
   return (
-    <div>
-          <div className=" grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full">
+    <div className="">
+          <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full">
       {entries.map((entry, index) => (
         <div
           key={index}
@@ -17,9 +17,9 @@ const EntryList = ({ entries, onSelect }) => {
           </figure>
 
           <div className="card-body">
-            <h2 className="card-title">{entry.title}</h2>
-            <p className="text-sm opacity-60">{entry.date}</p>
-            <p>{entry.text}</p>
+            <h2 className="card-title text-black">{entry.title}</h2>
+            <p className="text-sm opacity-60 text-black">{entry.date}</p>
+            <p className="text-black">{entry.text}</p>
           </div>
         </div>
       ))}
