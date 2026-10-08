@@ -13,7 +13,7 @@ const Header = ({ onAddClick }) => (
          <a href="#">
       <div className="flex items-center">
         <img 
-          src="src/assets/logo.png" 
+          src="/src/assets/logo.png" 
           alt="Logo" 
           className="w-25 object-contain" 
         />
