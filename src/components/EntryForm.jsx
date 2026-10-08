@@ -73,7 +73,7 @@ const EntryForm = ({ onSubmit, onCancel }) => {
 
       {error && <p className="text-sm text-red-400">{error}</p>}
 
-      <div className="flex justify-end gap-2">
+      <div className="flex justify-between gap-2">
         <button
           type="button"
           onClick={onCancel}
