@@ -1,8 +1,14 @@
 const EntryList = ({ entries, onSelect}) => {
+
+const sortedEntries = [...entries].sort(
+    (a, b) => new Date(a.date) - new Date(b.date)
+  );
+
   return (
     <div>
       <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto w-full">
-        {entries.map((entry, index) => (
+        
+        {sortedEntries.map((entry, index) => (
           <div
             key={index}
             onClick={() => onSelect(entry)}
