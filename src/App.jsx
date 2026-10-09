@@ -18,16 +18,21 @@ const App = () => {
   }, [entries])
 
   const handleAddEntry = (entry) => {
+    const alreadyExists = entries.some((item) => item.date === entry.date)
+
+    if (alreadyExists) {
+      return 'Für dieses Datum gibt es bereits einen Eintrag.'
+    }
+
     setEntries((prev) => [...prev, entry])
     setIsAddOpen(false)
+    return null
   }
 
   const handleDeleteEntry = (entryToDelete) => {
-  setEntries((prev) =>
-    prev.filter((entry) => entry !== entryToDelete)
-  )
-   setSelectedEntry(null)
-}
+    setEntries((prev) => prev.filter((entry) => entry !== entryToDelete))
+    setSelectedEntry(null)
+  }
 
   return (
     <div>
